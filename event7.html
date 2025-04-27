@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            justify-content: flex-start; /* Align to left */
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #ffcc00;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: rgba(0, 0, 0, 0.95);
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                padding: 15px 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+        }
+
+        .event-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        .event-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .event-title {
+            font-size: 2.2em;
+            font-weight: 800;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .rules, .contact {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .rules h2, .contact h2 {
+            color: #ffcc00;
+            font-size: 1.6em;
+            font-weight: 700;
+        }
+
+        .contact p span.title {
+            font-weight: 700;
+            color: #00ffd5;
+        }
+
+        .register-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #ffcc00;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .register-btn:hover {
+            background: #e6b800;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Magizh'25</div>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#rules">Rules</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="event-container">
+        <h1 class="event-title">SHIPWRECK</h1>
+        <div class="event-box">
+            <p>Dive into chaos and creativity in the Shipwreck event! Step into the shoes of a famous personality aboard a sinking ship and convince the captain why you deserve the last life jacket. With wit, humor, and persuasion, survive the tide and outshine your fellow castaways!</p>
+        </div>
+
+        <div class="rules" id="rules">
+            <h2>Rules & Regulations</h2>
+            <ul>
+                <li>Portray a given famous personality.</li>
+                <li>Only one lifejacket is available.</li>
+                <li>Convince judges how your personality is famous.</li>
+                <li>Arguments must fit the assigned personality.</li>
+                <li>Duration is 2-3 minutes per argument.</li>
+                <li>Judgement will be based on argument strength and personality
+                    portrayal.</li>
+                <li>Decision of the judges will be final.</li>
+                <li>No personal attacks or offensive content.</li>
+            </ul>
+        </div>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMvy6en7TFejGZWbQtxKmfZRcGkY-48I4jWOQYT1I4b92sOw/viewform" class="register-btn">Register Here</a>
+
+        <div class="contact" id="contact">
+            <h2>Contact</h2>
+            <p><span class="title">STAFF COORDINATOR:</span><br>Dr.Peetha Mary George-9445232768</p>
+            <p><span class="title">STUDENT COORDINATORS:</span><br>
+                Ms. Sumitha-8682915170<br>
+                Ms. Vinusha Nanthika-8925540877<br>
+                Ms. keshini-8526755799
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to toggle the navigation menu on mobile
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

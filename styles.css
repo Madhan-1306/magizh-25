@@ -1,0 +1,216 @@
+body {
+    background: linear-gradient(to right, #7e10a2, #b906eb);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+h2, h1 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.title-highlight {
+    display: inline-block;
+    padding: 0.2em 0;
+    border-bottom: 3px solid #fff;
+    margin-bottom: 10px;
+    font-size: 2.3em;
+    color: #ffffff;
+}
+
+
+nav {
+    background: #000;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: transform 0.3s;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    margin-right: 20px;
+}
+
+
+#home {
+    padding-top: 50px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.countdown {
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+#timer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.5em;
+    margin: 20px auto;
+    max-width: 800px; 
+}
+
+#timer div {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+#timer div p {
+    margin: 0;
+}
+
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.register-btn {
+    background: linear-gradient(to right, #ff6f61, #ff3b2f);
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s;
+}
+
+.register-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+
+.event-container, .contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.event-card, .contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.event-card {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.event-card:hover, .contact-card:hover {
+    transform: scale(1.05);
+}
+
+.contact-card img, .developer img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.developer {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.543);
+    text-align: center;
+}
+
+
+.footer img {
+    display: inline-block;
+    margin:0 10px auto; /* Space between images */
+    width: 100px; /* Adjust width as needed */
+  }
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    
+    #timer {
+        flex-direction: row;
+        gap: 10px;
+        font-size: 0.8em;
+        max-width: 100%;
+    }
+
+    #timer div {
+        flex: 1; 
+    }
+}

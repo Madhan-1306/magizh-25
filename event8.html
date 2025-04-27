@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            justify-content: flex-start; /* Align to left */
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #ffcc00;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: rgba(0, 0, 0, 0.95);
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                padding: 15px 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+        }
+
+        .event-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        .event-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .event-title {
+            font-size: 2.2em;
+            font-weight: 800;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .rules, .contact {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .rules h2, .contact h2 {
+            color: #ffcc00;
+            font-size: 1.6em;
+            font-weight: 700;
+        }
+
+        .contact p span.title {
+            font-weight: 700;
+            color: #00ffd5;
+        }
+
+        .register-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #ffcc00;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .register-btn:hover {
+            background: #e6b800;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Magizh'25</div>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#rules">Rules</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="event-container">
+        <h1 class="event-title">QUIZ</h1>
+        <div class="event-box">
+            <p>Put your knowledge to the test in the ultimate Quiz event! From general facts to mind-bending puzzles, this battle of brains will challenge your speed, accuracy, and intellect. Team up, think fast, and compete for the title of Quiz Champions. Let the buzzer decide your fate!</p>
+        </div>
+
+        <div class="rules" id="rules">
+            <h2>Rules & Regulations</h2>
+            <ul>
+                <li>An assortment of various topics.</li>
+                <li> Team Size : 2 .</li>
+                <li> No use of internet.</li>
+                <li>Questions will be both text and AV Based.</li>
+                <li>Will be held in 2 rounds .</li>
+                <li>Quiz master's decision is final.</li>
+            </ul>
+        </div>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMvy6en7TFejGZWbQtxKmfZRcGkY-48I4jWOQYT1I4b92sOw/viewform" class="register-btn">Register Here</a>
+
+        <div class="contact" id="contact">
+            <h2>Contact</h2>
+            <p><span class="title">STAFF COORDINATOR:</span><br>Mr.A.Kameshwaran-9698535730</p>
+            <p><span class="title">STUDENT COORDINATORS:</span><br>
+                Mr. Naveed Ahamed. H<br>
+                Mr. Kishore Kumar. R<br>
+                Mr. Manoj Kumar. P 
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to toggle the navigation menu on mobile
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
